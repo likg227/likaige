@@ -1,0 +1,16 @@
+
+.before{
+  margin-bottom: 20px;
+}
+.interval{
+  margin-bottom: 2px;
+  display: flex;
+}
+.itemRoot{
+ box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10);
+ background-color: beige;
+ 
+}
+.title1{
+  display: flex;
+}

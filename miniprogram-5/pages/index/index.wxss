@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+}
+.connect1{
+  font-style: oblique ; 
+  /* font-family: NSimSun; */
+  color: gray;
+}
+/* .switch_info {
+  display: flex;
+  flex-direction: column;
+  
+} */
+
+.connected {
+  color: green;
+  font-size: 50px;
+}
+
+.unconnnected {
+  color: red
+}
+.tem{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.first{
+  text-align: center;
+   
+}
+.heat1{
+  margin-left: 15px;
+}
+.second{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.down1{
+  margin-left: 15px;
+}
+.angle{
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.third{
+  text-align: center;
+}
+.act{
+  margin-bottom: 5px;
+  font-size: 20px;
+}

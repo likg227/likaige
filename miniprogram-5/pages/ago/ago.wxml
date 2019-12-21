@@ -1,0 +1,7 @@
+<button bindtap="getData" type="primary"  class="before"> 查看过往康复记录</button>
+<view wx:for="{{datalist}}">
+<view class="itemRoot">
+ <view class="title1">{{item.title}}</view>
+ <view class="interval">{{item.content}}</view>
+</view>
+</view>

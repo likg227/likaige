@@ -1,0 +1,10 @@
+.record{
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.biao{
+  margin-bottom: 2px;
+}
+.content1{
+  margin-bottom: 90px;
+}
