@@ -1,4 +1,4 @@
-﻿
+
 #include<iostream>
 #include<stdexcept>
 #include <time.h>
@@ -57,7 +57,6 @@ public:
 			delete temp;
 		}
 		delete front;
-		cout << endl;
 	}
 	void print() {
 		Node<T>* p = front->next;
@@ -104,7 +103,6 @@ public:
 
 	} 
 	int getLength() { return count; }
-	//解引用空指针也没事吗？
 	T Delete(int index) {
 		if (index < 0 || index >= count)
 			throw out_of_range("the index is out of range");
@@ -236,6 +234,7 @@ void Reverse_array(T *a,const int size){
 		swap(a[i], a[size - 1 - i]);
 }
 template<typename T>
+//大整数加法（仅限正数）
 void Big_add(int *a,int sa,int *b,int sb) {
 	Linklist<T> la;
 	la.Hconstruct(a, sa);
@@ -350,6 +349,7 @@ void Big_add(int *a,int sa,int *b,int sb) {
 	}
 	cout << endl;
 }
+//大整数减法（仅限正数）
 int  compare(int* a, int sa, int* b, int sb) {
 	if (sa > sb)
 		return 1;
@@ -444,6 +444,8 @@ int main()
 		a[i] = i;
 		b[i] = i + 5;
 	}
+
+	//构造大整数
 	srand((unsigned int)(time(NULL)));
 	int sna = 2, snb =5;
 	int* sa = new int[sna];
@@ -466,8 +468,15 @@ int main()
 		cout << sb[i];
 	}
 	cout << endl;
+
+	//大整数减法
 	Big_min(sa, sna, sb, snb);
-	//Big_add<int>(sa, sna, sb, snb);
+
+
+	//大整数加法
+	Big_add<int>(sa, sna, sb, snb);
+
+
 	delete[]sa;
 	delete[]sb;
 	/*for (const auto s : a) {
@@ -485,27 +494,27 @@ int main()
 	test2.Tconstruct(b, N);
 
 	//插入
-	//Ttest.Insert(100);
-	////删除
-	//auto da=Ttest.Delete(5);
-	////打印
-	//Ttest.print();
-	////查找
-	//int search_index= Ttest.Search(3);
-	//cout << search_index << endl;
-	////合并
-	//merge_list(Ttest, test2);
-	////merge(Ttest, test2);
-	//Reverse_linklist(test2);
-	//test2.print();
-	//for (const auto& s : a) {
-	//	cout << s << " ";
-	//}
-	//cout << endl;
-	//Reverse_array(a, N);
-	//for (const auto& s : a) {
-	//	cout << s << " ";
-	//}
+	Ttest.Insert(100);
+	//删除
+	auto da=Ttest.Delete(5);
+	//打印
+	Ttest.print();
+	//查找
+	int search_index= Ttest.Search(3);
+	cout << search_index << endl;
+	//合并
+	merge_list(Ttest, test2);
+	//merge(Ttest, test2);
+	Reverse_linklist(test2);
+	test2.print();
+	for (const auto& s : a) {
+		cout << s << " ";
+	}
+	cout << endl;
+	Reverse_array(a, N);
+	for (const auto& s : a) {
+		cout << s << " ";
+	}
 
 	}
 	catch (out_of_range err) {
